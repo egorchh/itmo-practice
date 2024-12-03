@@ -1,6 +1,8 @@
+import { Graph } from '../components';
+
 const GraphPage = () => {
 	return (
-		<h1>Hello, Graph!</h1>
+		<Graph />
 	)
 }
 

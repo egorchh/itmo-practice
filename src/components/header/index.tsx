@@ -26,8 +26,8 @@ export const Header = () => {
 				<img className={styles.logo} src={itmoLogo} height={40} width='auto' />
 			</a>
 			<nav className={styles.navbar}>
-				<NavLink className={styles.link} to={AppRoutes.Glossary}>Глоссарий</NavLink>
-				<NavLink className={styles.link} to={AppRoutes.Graph}>Граф</NavLink>
+				<NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.link} to={AppRoutes.Glossary}>Глоссарий</NavLink>
+				<NavLink className={({ isActive }) => isActive ? styles.activeLink : styles.link} to={AppRoutes.Graph}>Граф</NavLink>
 			</nav>
 			<div className={styles.githubLink}>
 				<a
