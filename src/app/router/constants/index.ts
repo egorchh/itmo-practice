@@ -1,0 +1,1 @@
+export const GITHUB_PAGES_BASE_APP_ROUTER = '/itmo-practice'
