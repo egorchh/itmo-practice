@@ -11,10 +11,10 @@ cd dist
 
 # Инициализация Git в папке dist
 git init
-git add -A
+git add -A -f
 git commit -m 'deploy'
 
-git push -f git@github.com:egorchh/egorchh.github.io.git master
+git push -f git@github.com:egorchh/itmo-practice.git main:gh-pages
 
 # Возврат в корень проекта
 cd -
