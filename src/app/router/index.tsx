@@ -5,12 +5,12 @@ import { Layout } from './components/layout/index.tsx';
 
 const GlossaryPage = lazy(() => import('../../pages/glossary-page'));
 const GraphPage = lazy(() => import('../../pages/graph-page'));
-const NotFoundPage = lazy(() => import('../../pages/not-found-page'));
+const NotFoundPage = lazy(() => import('../../pages/not-found-page/index.tsx'));
 
 export const Router = () => {
 	return (
 		<BrowserRouter>
-			<Suspense fallback={<div>Loading ...</div>}>
+			<Suspense fallback={null}>
 				<Routes>
 					<Route path={AppRoutes.Glossary} element={<Layout />}>
 						<Route index element={<GlossaryPage />} />
