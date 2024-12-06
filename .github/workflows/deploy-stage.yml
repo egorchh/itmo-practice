@@ -1,35 +1,65 @@
-name: Deploy to GitHub Pages
+name: Deploy Application
 
 on:
   push:
     branches:
       - main
+    paths:
+      - 'client/**'
+      - 'server/**'
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Настройка Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           cache: 'npm'
-          cache-dependency-path: './client/package-lock.json'
+          cache-dependency-path: |
+            ./client/package-lock.json
+            ./server/package-lock.json
 
-      - name: Install dependencies
+      # Установка зависимостей и сборка сервера
+      - name: Install server dependencies
+        working-directory: ./server
+        run: npm ci
+
+      - name: Build server
+        working-directory: ./server
+        run: |
+          npm run build || true
+          cp -r data dist/
+
+      # Установка зависимостей и сборка клиента
+      - name: Install client dependencies
         working-directory: ./client
         run: npm ci
 
-      - name: Build
+      - name: Build client
         working-directory: ./client
         run: npm run build
 
+      # Подготовка к деплою
+      - name: Prepare deployment
+        run: |
+          mkdir -p dist
+          cp -r client/dist/* dist/
+          mkdir -p dist/api
+          cp -r server/dist/* dist/api/
+          cp server/package.json dist/api/
+          cp server/package-lock.json dist/api/
+
+      # Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./client/dist
+          publish_dir: ./dist
+          enable_jekyll: false
