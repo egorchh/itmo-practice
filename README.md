@@ -92,6 +92,39 @@ docker-compose up --build
 
 Docker был выбран как наиболее универсальное и проверенное решение, обеспечивающее максимальную совместимость и простоту развертывания.
 
+## Deployment
+
+The project is automatically deployed to GitHub Pages on every push to the main branch. You can view the live version at:
+https://[your-github-username].github.io/itmo-practice/
+
+### Deployment Process
+
+1. Push your changes to the main branch
+2. GitHub Actions will automatically:
+   - Install dependencies
+   - Build the project
+   - Deploy to GitHub Pages
+
+The deployment process typically takes 2-3 minutes to complete.
+
+### Local Development
+
+1. Install dependencies:
+```bash
+cd client
+npm install
+```
+
+2. Start development server:
+```bash
+npm start
+```
+
+3. Build for production:
+```bash
+npm run build
+```
+
 ## Разработка
 
 ### Запуск в режиме разработки
