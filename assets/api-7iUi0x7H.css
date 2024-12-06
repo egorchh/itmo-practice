@@ -1,0 +1,1 @@
+._spinnerContainer_iorbd_1{display:flex;justify-content:center;align-items:center;width:100%;height:100%;min-height:200px}._spinner_iorbd_1{width:50px;height:50px;border:5px solid #f3f3f3;border-top:5px solid #3498db;border-radius:50%;animation:_spin_iorbd_1 1s linear infinite}@keyframes _spin_iorbd_1{0%{transform:rotate(0)}to{transform:rotate(360deg)}}
