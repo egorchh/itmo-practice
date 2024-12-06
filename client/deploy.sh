@@ -4,7 +4,7 @@
 set -e
 
 # Сборка проекта
-npm run build ./client
+npm run build
 
 # Переход в папку сборки
 cd dist
