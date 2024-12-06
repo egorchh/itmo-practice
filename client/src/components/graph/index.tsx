@@ -7,7 +7,6 @@ import {
 } from '@xyflow/react';
 import { fallbackEdges, fallbackNodes } from '../../constants/fallback-data';
 import '@xyflow/react/dist/style.css';
-import styles from './styles.module.css';
 
 interface GraphProps {
 	nodes?: Node[];
@@ -20,15 +19,13 @@ export const Graph = ({ nodes, edges, useMockData = false }: GraphProps) => {
 	const displayEdges = useMockData && !edges ? fallbackEdges : edges;
 
 	return (
-		<div className={styles.graphWrapper}>
-			<ReactFlow
-				nodes={displayNodes}
-				edges={displayEdges}
-				fitView
-			>
-				<Controls showInteractive={false} />
-				<Background />
-			</ReactFlow>
-		</div>
+		<ReactFlow
+			nodes={displayNodes}
+			edges={displayEdges}
+			fitView
+		>
+			<Controls showInteractive={false} />
+			<Background />
+		</ReactFlow>
 	);
 };
