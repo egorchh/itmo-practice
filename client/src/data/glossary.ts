@@ -157,7 +157,7 @@ export const glossaryEdges = [
 		"source": "2",
 		"target": "1",
 		"relation": "в основе имеет",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "5",
@@ -183,13 +183,13 @@ export const glossaryEdges = [
 		"source": "9",
 		"target": "2",
 		"relation": "определяет",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "7",
 		"target": "1",
 		"relation": "описывает результат",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "1",
@@ -200,7 +200,7 @@ export const glossaryEdges = [
 		"source": "11",
 		"target": "1",
 		"relation": "обеспечивает поддержку",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "12",
@@ -211,19 +211,19 @@ export const glossaryEdges = [
 		"source": "13",
 		"target": "1",
 		"relation": "создают угрозу",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "14",
 		"target": "1",
 		"relation": "описывает",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "15",
 		"target": "9",
 		"relation": "привлекает",
-		marker: 'end'
+		"marker": "end"
 	},
 	{
 		"source": "3",

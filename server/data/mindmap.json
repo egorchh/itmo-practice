@@ -154,7 +154,8 @@
 		{
 			"source": "2",
 			"target": "1",
-			"relation": "в основе имеет"
+			"relation": "в основе имеет",
+			"marker": "end"
 		},
 		{
 			"source": "5",
@@ -179,12 +180,14 @@
 		{
 			"source": "9",
 			"target": "2",
-			"relation": "определяет"
+			"relation": "определяет",
+			"marker": "end"
 		},
 		{
 			"source": "7",
 			"target": "1",
-			"relation": "описывает результат"
+			"relation": "описывает результат",
+			"marker": "end"
 		},
 		{
 			"source": "1",
@@ -194,7 +197,8 @@
 		{
 			"source": "11",
 			"target": "1",
-			"relation": "обеспечивает поддержку"
+			"relation": "обеспечивает поддержку",
+			"marker": "end"
 		},
 		{
 			"source": "12",
@@ -204,17 +208,20 @@
 		{
 			"source": "13",
 			"target": "1",
-			"relation": "создают угрозу"
+			"relation": "создают угрозу",
+			"marker": "end"
 		},
 		{
 			"source": "14",
 			"target": "1",
-			"relation": "описывает"
+			"relation": "описывает",
+			"marker": "end"
 		},
 		{
 			"source": "15",
 			"target": "9",
-			"relation": "привлекает"
+			"relation": "привлекает",
+			"marker": "end"
 		},
 		{
 			"source": "3",
