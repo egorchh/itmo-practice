@@ -1,6 +1,7 @@
-import type { GlossaryCard } from "../types/glossary";
+import type { MindMapNode } from "../types";
+import { getEdgesFromData, getNodesFromData } from "../utils";
 
-export const glossaryNodes: GlossaryCard[] = [
+export const glossaryNodes: MindMapNode[] = [
 	{
 		"id": "1",
 		"term": "Стартап",
@@ -231,3 +232,6 @@ export const glossaryEdges = [
 		"relation": "может потребоваться"
 	}
 ]
+
+export const fallbackNodes = getNodesFromData(glossaryNodes);
+export const fallbackEdges = getEdgesFromData(glossaryEdges);

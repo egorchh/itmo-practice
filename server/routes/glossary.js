@@ -6,20 +6,26 @@ import { dataStore } from '../storage.js';
 const router = express.Router();
 
 router.get('/', (req, res) => {
-	const term = req.query.term;
+	const { term, id } = req.query;
 	const glossary = dataStore.getGlossary();
 
 	if (!glossary) {
 		return res.status(500).json({ error: 'Glossary not loaded' });
 	}
 
-	if (!term) {
+	if (!term && !id) {
 		return res.json(glossary);
 	}
 
-	const definition = glossary[term];
-	if (definition) {
-		return res.send(definition);
+	let termData;
+	if (id) {
+		termData = glossary.data.find(item => item.id === parseInt(id));
+	} else if (term) {
+		termData = glossary.data.find(item => item.term === term);
+	}
+
+	if (termData) {
+		return res.json(termData);
 	}
 
 	res.status(404).send('Term not found');

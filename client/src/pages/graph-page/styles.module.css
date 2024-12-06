@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--header-height));
+  gap: 15px;
+  padding-top: 20px;
+}
+
+.title {
+  font-weight: 600;
+	font-size: 28px;
+}
+
+.graphContainer {
+  background-color: white;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 800px;
+  min-height: 600px;
+  width: 100%;
+}
+
+.error {
+  padding: 20px;
+  background-color: rgb(255, 97, 97);
+  color: white;
+  width: fit-content;
+  min-width: 300px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mockButton {
+  background-color: white;
+  color: rgb(255, 97, 97);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.mockButton:hover {
+  background-color: rgb(245, 245, 245);
+}

@@ -5,7 +5,7 @@ import { Layout } from './components/layout/index.tsx';
 import { GITHUB_PAGES_BASE_APP_ROUTER } from './constants/index.ts';
 
 const GlossaryPage = lazy(() => import('../../pages/glossary-page/index.tsx'));
-const GraphPage = lazy(() => import('../../pages/graph-page.tsx'));
+const GraphPage = lazy(() => import('../../pages/graph-page/index.tsx'));
 const NotFoundPage = lazy(() => import('../../pages/not-found-page/index.tsx'));
 
 export const Router = () => {

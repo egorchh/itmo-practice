@@ -1,7 +1,7 @@
-import type { GlossaryCard } from "../../types/glossary";
+import type { GlossaryTerm } from "../../types";
 import styles from './styles.module.css';
 
-export const Card = ({ term, definition }: GlossaryCard) => {
+export const Card = ({ term, definition }: GlossaryTerm) => {
 	return (
 		<article className={styles.card}>
 			<h3 className={styles.title}>{term}</h3>
