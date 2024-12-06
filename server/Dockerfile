@@ -1,15 +1,40 @@
-FROM node:slim
+# Базовый образ для сборки
+FROM node:18-alpine as builder
 
-WORKDIR /usr/src/app
+# Рабочая директория
+WORKDIR /app
 
+# Копируем файлы package.json и package-lock.json
 COPY package*.json ./
 
-RUN npm install
+# Устанавливаем зависимости
+RUN npm ci
 
+# Копируем исходный код
 COPY . .
 
-ENV PORT 8080
+# Копируем данные
+COPY data ./data
 
-EXPOSE 8080
+# Финальный образ
+FROM node:18-alpine
 
-CMD ["npm", "start"]
+WORKDIR /app
+
+# Копируем файлы из builder
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/src ./src
+COPY --from=builder /app/data ./data
+
+# Устанавливаем только production зависимости
+RUN npm ci --only=production
+
+# Определяем переменные окружения
+ENV PORT=4444
+ENV NODE_ENV=production
+
+# Открываем порт
+EXPOSE 4444
+
+# Запускаем сервер
+CMD ["node", "src/index.js"]

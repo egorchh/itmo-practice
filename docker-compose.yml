@@ -1,29 +1,35 @@
 version: '3.8'
 
 services:
-  backend:
-    build: 
+  # Сервер
+  server:
+    build:
       context: ./server
       dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./server:/usr/src/app
-      - /usr/src/app/node_modules
+    container_name: glossary-server
+    restart: unless-stopped
     environment:
-      - NODE_ENV=development
-      - PORT=8080
+      - NODE_ENV=production
+      - PORT=4444
+    volumes:
+      - ./server/data:/app/data
+    networks:
+      - app-network
 
-  frontend:
+  # Клиент
+  client:
     build:
       context: ./client
       dockerfile: Dockerfile
+    container_name: glossary-client
+    restart: unless-stopped
     ports:
-      - "3000:3000"
-    volumes:
-      - ./client:/usr/src/app
-      - /usr/src/app/node_modules
-    environment:
-      - VITE_API_URL=http://backend:8080
+      - "80:80"
     depends_on:
-      - backend
+      - server
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
