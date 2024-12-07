@@ -17,8 +17,14 @@ export type MindMapEdge = {
 	marker?: string;
 }
 
+export type Source = {
+	name: string;
+	url: string;
+}
+
 export type GlossaryTerm = {
 	id: number;
 	term: string;
 	definition: string;
+	source: Source;
 }
