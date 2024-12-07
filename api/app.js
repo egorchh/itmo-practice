@@ -9,7 +9,11 @@ import { dataService } from './services/data.service.js';
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: ['https://egorchh.github.io', 'http://localhost:5173'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
 app.use(express.json());
 app.use(requestLogger);
 
