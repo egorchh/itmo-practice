@@ -152,84 +152,84 @@ export const glossaryEdges = [
 	{
 		"source": "1",
 		"target": "3",
-		"relation": "разрабатывает для тестирования"
+		"relation": "является этапом"
 	},
 	{
 		"source": "2",
 		"target": "1",
-		"relation": "описывает структуру",
+		"relation": "в основе имеет",
 		"marker": "end"
 	},
 	{
 		"source": "5",
 		"target": "4",
-		"relation": "представляются через"
+		"relation": "помогает получить"
 	},
 	{
 		"source": "1",
 		"target": "5",
-		"relation": "привлекает для развития"
+		"relation": "поддерживают"
 	},
 	{
 		"source": "1",
 		"target": "6",
-		"relation": "создаётся и управляется"
+		"relation": "участвует в создании"
 	},
 	{
 		"source": "3",
 		"target": "8",
-		"relation": "проверяет"
+		"relation": "тестируется через"
 	},
 	{
 		"source": "9",
 		"target": "2",
-		"relation": "является частью",
+		"relation": "определяет",
 		"marker": "end"
 	},
 	{
 		"source": "7",
 		"target": "1",
-		"relation": "важный показатель для",
+		"relation": "описывает результат",
 		"marker": "end"
 	},
 	{
 		"source": "1",
 		"target": "10",
-		"relation": "может завершиться через"
+		"relation": "является целью"
 	},
 	{
 		"source": "11",
 		"target": "1",
-		"relation": "развивает и поддерживает",
+		"relation": "обеспечивает поддержку",
 		"marker": "end"
 	},
 	{
 		"source": "12",
 		"target": "1",
-		"relation": "помогает на ранних этапах"
+		"relation": "обеспечивает ресурсы"
 	},
 	{
 		"source": "13",
 		"target": "1",
-		"relation": "присущи из-за неопределённости",
+		"relation": "создают угрозу",
 		"marker": "end"
 	},
 	{
 		"source": "14",
 		"target": "1",
-		"relation": "определяет сферу деятельности",
+		"relation": "описывает",
 		"marker": "end"
 	},
 	{
 		"source": "15",
 		"target": "9",
-		"relation": "находит и привлекает",
+		"relation": "привлекает",
 		"marker": "end"
 	},
 	{
 		"source": "3",
 		"target": "16",
-		"relation": "может привести к"
+		"relation": "может потребоваться"
 	}
 ];
 
