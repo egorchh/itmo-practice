@@ -20,30 +20,3 @@
   min-height: 600px;
   width: 100%;
 }
-
-.error {
-  padding: 20px;
-  background-color: rgb(255, 97, 97);
-  color: white;
-  width: fit-content;
-  min-width: 300px;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.mockButton {
-  background-color: white;
-  color: rgb(255, 97, 97);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.mockButton:hover {
-  background-color: rgb(245, 245, 245);
-}

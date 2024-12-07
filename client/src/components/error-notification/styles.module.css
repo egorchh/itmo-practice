@@ -1,28 +1,21 @@
-.container {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-	column-gap: 20px;
-	row-gap: 20px;
-}
-
 .error {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
-	padding: 15px 20px;
+	padding: 20px;
 	background-color: rgb(255, 97, 97);
 	color: white;
 	width: fit-content;
 	min-width: 300px;
 	border-radius: 12px;
-}
-
-.buttons {
 	display: flex;
-	gap: 10px;
-}
-
-.mockButton {
+	flex-direction: column;
+	gap: 15px;
+  }
+  
+  .buttons {
+	  display: flex;
+	  gap: 10px;
+  }
+  
+  .mockButton {
 	background-color: white;
 	color: rgb(255, 97, 97);
 	border: none;

@@ -5,7 +5,7 @@ import {
 	Node,
 	Edge
 } from '@xyflow/react';
-import { fallbackEdges, fallbackNodes } from '../../constants/fallback-data';
+import { fallbackEdges, fallbackNodes } from '../../constants/fallback-mind-map-data';
 import '@xyflow/react/dist/style.css';
 
 interface GraphProps {

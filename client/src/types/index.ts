@@ -18,7 +18,7 @@ export type MindMapEdge = {
 }
 
 export type GlossaryTerm = {
-	id: string;
+	id: number;
 	term: string;
 	definition: string;
 }
