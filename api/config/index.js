@@ -6,7 +6,7 @@ dotenv.config();
 const dataDir = path.join(process.cwd(), 'data');
 
 export const config = {
-    port: process.env.PORT || 4444,
+    port: process.env.PORT || 5555,
     env: process.env.NODE_ENV || 'development',
     dataFiles: {
         glossary: path.join(dataDir, 'glossary.json'),
