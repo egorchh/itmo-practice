@@ -9,20 +9,24 @@ services:
     restart: unless-stopped
     environment:
       - NODE_ENV=production
-      - PORT=4444
+      - PORT=5555
     volumes:
       - ./server/data:/app/data
     networks:
       - app-network
+    ports:
+      - "5555:5555"
 
   client:
     build:
       context: ./client
       dockerfile: Dockerfile
+      args:
+        - VITE_API_URL=http://localhost:5555
     container_name: glossary-client
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "3000:3000"
     depends_on:
       - server
     networks:

@@ -1,4 +1,4 @@
-FROM node:18-alpine as builder
+FROM node:18.19-alpine3.19 as builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ COPY . .
 
 COPY data ./data
 
-FROM node:18-alpine
+FROM node:18.19-alpine3.19
 
 WORKDIR /app
 
@@ -20,9 +20,9 @@ COPY --from=builder /app/data ./data
 
 RUN npm ci --only=production
 
-ENV PORT=4444
+ENV PORT=5555
 ENV NODE_ENV=production
 
-EXPOSE 4444
+EXPOSE 5555
 
 CMD ["node", "src/index.js"]

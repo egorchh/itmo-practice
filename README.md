@@ -1,9 +1,9 @@
 ## Практика. 3 семестр магистратуры ИТМО
 
-> Задание на практику представлено в [docs/TASK.md](docs/TASK.md);
-> Подробный отчет о проделанной работе доступен в [docs/REPORT.md](docs/REPORT.md);
-> Инструкция по эксплуатации [docs/START.md](docs/START.md);
-> Анализ технологий [docs/ANALYZE.md](docs/ANALYZE.md);
+1. Задание на практику представлено в [docs/TASK.md](docs/TASK.md);
+2. Подробный отчет о проделанной работе доступен в [docs/REPORT.md](docs/REPORT.md);
+3. Инструкция по эксплуатации [docs/START.md](docs/START.md);
+4. Анализ технологий [docs/ANALYZE.md](docs/ANALYZE.md);
 
 ### Скриншоты
 
