@@ -67,7 +67,7 @@ docker-compose up --build
 ```
 
 3. Приложение будет доступно по адресам:
-- Frontend: http://localhost:80
+- Frontend: http://localhost:3000
 - Backend: http://localhost:5555
 
 #### Развертывание на Heroku
