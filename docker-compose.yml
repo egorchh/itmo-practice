@@ -1,7 +1,6 @@
 version: '3.8'
 
 services:
-  # Сервер
   server:
     build:
       context: ./server
@@ -16,7 +15,6 @@ services:
     networks:
       - app-network
 
-  # Клиент
   client:
     build:
       context: ./client

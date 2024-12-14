@@ -16,7 +16,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Настройка Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
@@ -26,7 +25,6 @@ jobs:
             ./client/package-lock.json
             ./server/package-lock.json
 
-      # Установка зависимостей и сборка сервера
       - name: Install server dependencies
         working-directory: ./server
         run: npm ci
@@ -37,7 +35,6 @@ jobs:
           npm run build || true
           cp -r data dist/
 
-      # Установка зависимостей и сборка клиента
       - name: Install client dependencies
         working-directory: ./client
         run: npm ci
@@ -46,7 +43,6 @@ jobs:
         working-directory: ./client
         run: npm run build
 
-      # Подготовка к деплою
       - name: Prepare deployment
         run: |
           mkdir -p dist
@@ -56,7 +52,6 @@ jobs:
           cp server/package.json dist/api/
           cp server/package-lock.json dist/api/
 
-      # Деплой на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

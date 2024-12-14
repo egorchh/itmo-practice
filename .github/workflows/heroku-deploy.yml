@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'server/**'  # Триггерим деплой только при изменениях в папке server
+      - 'server/**'
 
 jobs:
   deploy:
@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # Нужно для работы с git subtree
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -25,9 +25,9 @@ jobs:
       - name: Login to Heroku
         uses: akhileshns/heroku-deploy@v3.12.14
         with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }} # HEROKU_API_KEY должен быть описан в секретах репозитория
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: "itmo-practice"
-          heroku_email: ${{ secrets.HEROKU_EMAIL }} # HEROKU_EMAIL должен быть описан в секретах репозитория
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
 
       - name: Deploy to Heroku
         run: |
